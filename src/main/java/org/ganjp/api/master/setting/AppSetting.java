@@ -1,0 +1,40 @@
+package org.ganjp.api.master.setting;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "master_app_settings")
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class AppSetting {
+
+    @Id
+    @Column(name = "id", length = 36)
+    private String id;
+
+    @Column(name = "name", length = 50, nullable = false)
+    private String name;
+
+    @Column(name = "value", length = 500)
+    private String value;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "lang", nullable = false)
+    @Builder.Default
+    private Language lang = Language.EN;
+
+    @Column(name = "is_public", nullable = false)
+    @Builder.Default
+    private Boolean isPublic = false;
+
+    public enum Language {
+        EN,
+        ZH
+    }
+}

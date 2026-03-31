@@ -1,0 +1,24 @@
+package org.ganjp.api.cms.image;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.ganjp.api.cms.image.Image;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class ImageResponse {
+    private String id;
+    private String name;
+    private String altText;
+    private String url;
+    private String thumbnailUrl;
+    private String originalUrl;
+    private String tags;
+    private Image.Language lang;
+    private Integer displayOrder;
+    private String updatedAt;
+}

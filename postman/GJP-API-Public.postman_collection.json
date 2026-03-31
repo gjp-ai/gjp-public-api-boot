@@ -1,0 +1,499 @@
+{
+	"info": {
+		"_postman_id": "e4ba8c73-f1d2-45e0-b6c8-5fb1cc0c7b74",
+		"name": "GJP-API-Public",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Root",
+			"item": [
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Articles",
+			"item": [
+				{
+					"name": "Get Articles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/articles?page=0&size=20",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Article By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/articles/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"articles",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Settings",
+			"item": [
+				{
+					"name": "Get App Settings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/app-settings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"app-settings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Videos",
+			"item": [
+				{
+					"name": "Get Videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/videos?page=0&size=20",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"videos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Video By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/videos/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"videos",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "Get Images",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/images",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Image By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/images/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"images",
+								":id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/images/view/:filename",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"images",
+								"view",
+								":filename"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Audios",
+			"item": [
+				{
+					"name": "Get Audios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/audios",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"audios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Audio By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/audios/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"audios",
+								":id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Audio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/audios/view/:filename",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"audios",
+								"view",
+								":filename"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Audio Cover Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/audios/cover-images/:filename",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"audios",
+								"cover-images",
+								":filename"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "Get Questions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/questions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Question By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/questions/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"questions",
+								":id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Websites",
+			"item": [
+				{
+					"name": "Get Websites",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/websites",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"websites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Website By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/websites/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"websites",
+								":id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logos",
+			"item": [
+				{
+					"name": "Get Logos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/logos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"logos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Logo By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/logos/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"logos",
+								":id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "Get Files",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/files",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"files"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get File By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/files/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"files",
+								":id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View File",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/files/view/:filename",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"files",
+								"view",
+								":filename"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8081",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,427 @@
+{
+	"info": {
+		"name": "GJP API Public",
+		"description": "Public API collection for gjp-api-public-springboot.\n\nBase URL: http://localhost:8081/api\n\nAll endpoints are GET-only (read-only public API, no authentication required).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8081/api",
+			"type": "string"
+		},
+		{
+			"key": "id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "filename",
+			"value": "",
+			"type": "string"
+		}
+	],
+	"item": [
+		{
+			"name": "Health Check",
+			"item": [
+				{
+					"name": "Root - Welcome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": ["{{baseUrl}}"],
+							"path": [""]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "App Settings",
+			"item": [
+				{
+					"name": "Get All App Settings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/app-settings",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "app-settings"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Articles",
+			"item": [
+				{
+					"name": "Get Articles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/articles?page=0&size=20&sort=displayOrder&direction=asc",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "articles"],
+							"query": [
+								{ "key": "title", "value": "", "disabled": true },
+								{ "key": "lang", "value": "", "description": "EN or ZH", "disabled": true },
+								{ "key": "tags", "value": "", "disabled": true },
+								{ "key": "isActive", "value": "true", "disabled": true },
+								{ "key": "page", "value": "0" },
+								{ "key": "size", "value": "20" },
+								{ "key": "sort", "value": "displayOrder" },
+								{ "key": "direction", "value": "asc" }
+							]
+						}
+					}
+				},
+				{
+					"name": "Get Article By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/articles/{{id}}",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "articles", "{{id}}"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Audios",
+			"item": [
+				{
+					"name": "Get Audios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/audios?page=0&size=20&sort=displayOrder&direction=asc",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "audios"],
+							"query": [
+								{ "key": "name", "value": "", "disabled": true },
+								{ "key": "lang", "value": "", "description": "EN or ZH", "disabled": true },
+								{ "key": "tags", "value": "", "disabled": true },
+								{ "key": "isActive", "value": "true", "disabled": true },
+								{ "key": "page", "value": "0" },
+								{ "key": "size", "value": "20" },
+								{ "key": "sort", "value": "displayOrder" },
+								{ "key": "direction", "value": "asc" }
+							]
+						}
+					}
+				},
+				{
+					"name": "Get Audio By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/audios/{{id}}",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "audios", "{{id}}"]
+						}
+					}
+				},
+				{
+					"name": "View Audio File (Stream)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Range",
+								"value": "bytes=0-",
+								"description": "Optional range header for streaming",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1/audios/view/{{filename}}",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "audios", "view", "{{filename}}"]
+						}
+					}
+				},
+				{
+					"name": "View Audio Cover Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/audios/cover-images/{{filename}}",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "audios", "cover-images", "{{filename}}"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "Get Files",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/files?page=0&size=20&sort=displayOrder&direction=asc",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "files"],
+							"query": [
+								{ "key": "name", "value": "", "disabled": true },
+								{ "key": "lang", "value": "", "description": "EN or ZH", "disabled": true },
+								{ "key": "tags", "value": "", "disabled": true },
+								{ "key": "isActive", "value": "true", "disabled": true },
+								{ "key": "page", "value": "0" },
+								{ "key": "size", "value": "20" },
+								{ "key": "sort", "value": "displayOrder" },
+								{ "key": "direction", "value": "asc" }
+							]
+						}
+					}
+				},
+				{
+					"name": "Get File By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/files/{{id}}",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "files", "{{id}}"]
+						}
+					}
+				},
+				{
+					"name": "View File (Download)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/files/view/{{filename}}",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "files", "view", "{{filename}}"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "Get Images",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/images?page=0&size=20&sort=displayOrder&direction=asc",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "images"],
+							"query": [
+								{ "key": "name", "value": "", "disabled": true },
+								{ "key": "lang", "value": "", "description": "EN or ZH", "disabled": true },
+								{ "key": "tags", "value": "", "disabled": true },
+								{ "key": "isActive", "value": "true", "disabled": true },
+								{ "key": "page", "value": "0" },
+								{ "key": "size", "value": "20" },
+								{ "key": "sort", "value": "displayOrder" },
+								{ "key": "direction", "value": "asc" }
+							]
+						}
+					}
+				},
+				{
+					"name": "Get Image By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/images/{{id}}",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "images", "{{id}}"]
+						}
+					}
+				},
+				{
+					"name": "View Image File",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/images/view/{{filename}}",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "images", "view", "{{filename}}"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Logos",
+			"item": [
+				{
+					"name": "Get Logos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/logos?page=0&size=20&sort=displayOrder&direction=asc",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "logos"],
+							"query": [
+								{ "key": "name", "value": "", "disabled": true },
+								{ "key": "lang", "value": "", "description": "EN or ZH", "disabled": true },
+								{ "key": "tags", "value": "", "disabled": true },
+								{ "key": "isActive", "value": "true", "disabled": true },
+								{ "key": "page", "value": "0" },
+								{ "key": "size", "value": "20" },
+								{ "key": "sort", "value": "displayOrder" },
+								{ "key": "direction", "value": "asc" }
+							]
+						}
+					}
+				},
+				{
+					"name": "Get Logo By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/logos/{{id}}",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "logos", "{{id}}"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "Get Questions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/questions?page=0&size=20&sort=displayOrder&direction=asc",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "questions"],
+							"query": [
+								{ "key": "question", "value": "", "disabled": true },
+								{ "key": "lang", "value": "", "description": "EN or ZH", "disabled": true },
+								{ "key": "tags", "value": "", "disabled": true },
+								{ "key": "isActive", "value": "true", "disabled": true },
+								{ "key": "page", "value": "0" },
+								{ "key": "size", "value": "20" },
+								{ "key": "sort", "value": "displayOrder" },
+								{ "key": "direction", "value": "asc" }
+							]
+						}
+					}
+				},
+				{
+					"name": "Get Question By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/questions/{{id}}",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "questions", "{{id}}"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Videos",
+			"item": [
+				{
+					"name": "Get Videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/videos?page=0&size=20&sort=displayOrder&direction=asc",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "videos"],
+							"query": [
+								{ "key": "name", "value": "", "disabled": true },
+								{ "key": "lang", "value": "", "description": "EN or ZH", "disabled": true },
+								{ "key": "tags", "value": "", "disabled": true },
+								{ "key": "isActive", "value": "true", "disabled": true },
+								{ "key": "page", "value": "0" },
+								{ "key": "size", "value": "20" },
+								{ "key": "sort", "value": "displayOrder" },
+								{ "key": "direction", "value": "asc" }
+							]
+						}
+					}
+				},
+				{
+					"name": "Get Video By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/videos/{{id}}",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "videos", "{{id}}"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Websites",
+			"item": [
+				{
+					"name": "Get Websites",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/websites?page=0&size=20&sort=displayOrder&direction=asc",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "websites"],
+							"query": [
+								{ "key": "name", "value": "", "disabled": true },
+								{ "key": "lang", "value": "", "description": "EN or ZH", "disabled": true },
+								{ "key": "tags", "value": "", "disabled": true },
+								{ "key": "isActive", "value": "true", "disabled": true },
+								{ "key": "page", "value": "0" },
+								{ "key": "size", "value": "20" },
+								{ "key": "sort", "value": "displayOrder" },
+								{ "key": "direction", "value": "asc" }
+							]
+						}
+					}
+				},
+				{
+					"name": "Get Website By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/websites/{{id}}",
+							"host": ["{{baseUrl}}"],
+							"path": ["v1", "websites", "{{id}}"]
+						}
+					}
+				}
+			]
+		}
+	]
+}

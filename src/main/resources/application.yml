@@ -1,0 +1,81 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /api/
+
+spring:
+  application:
+    name: GJP-API-PUBLIC
+  profiles:
+    active: dev
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    time-zone: UTC
+    date-format: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# ── CMS upload config (shared across profiles) ──
+cms:
+  base-url: ${CMS_BASE_URL}
+  upload:
+    root-directory: ${CMS_UPLOAD_DIR:${user.home}/Data/gjp-api/uploads}
+
+article:
+  cover-image:
+    base-url: ${cms.base-url}/v1/articles/cover-images/
+    upload:
+      directory: ${cms.upload.root-directory}/articles/cover-images
+  content-image:
+    base-url: ${cms.base-url}/v1/articles/content-images/
+    upload:
+      directory: ${cms.upload.root-directory}/articles/content-images
+
+audio:
+  base-url: ${cms.base-url}/v1/audios/
+  cover-image:
+    base-url: ${cms.base-url}/v1/audios/cover-images/
+  upload:
+    directory: ${cms.upload.root-directory}/audios
+
+video:
+  base-url: ${cms.base-url}/v1/videos/
+  cover-image:
+    base-url: ${cms.base-url}/v1/videos/cover-images/
+  upload:
+    directory: ${cms.upload.root-directory}/videos
+    max-file-size: 524288000
+    cover-image:
+      max-size: 600
+    download:
+      max-resolution: 720
+
+image:
+  base-url: ${cms.base-url}/v1/images/view/
+  upload:
+    directory: ${cms.upload.root-directory}/images
+    max-file-size: 10485760
+    resize:
+      max-size: 1200
+      thumbnail-size: 400
+
+file:
+  base-url: ${cms.base-url}/v1/files/view/
+  upload:
+    directory: ${cms.upload.root-directory}/files
+    max-file-size: 52428800
+
+logo: 
+  base-url: ${cms.base-url}/v1/logos/view/
+  upload:
+    directory: ${cms.upload.root-directory}/logos
+    max-file-size: 5242880
+    resize:
+      target-size: 256
+
+
