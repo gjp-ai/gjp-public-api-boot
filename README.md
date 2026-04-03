@@ -1,2 +1,2 @@
-# gjp-api-public-springboot
+# gjp-public-api-boot
 Public access APIs

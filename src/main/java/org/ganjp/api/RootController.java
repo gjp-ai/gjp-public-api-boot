@@ -8,7 +8,7 @@ public class RootController {
 
     @GetMapping("/")
     public String getWelcomeMessage() {
-        return "Welcome to Gan Jian Ping Public APIs";
+        return "Welcome to Gan Jian Ping Public API";
     }
 }
 
