@@ -17,7 +17,7 @@ spring:
     show-sql: true
 
 cms:
-  base-url: http://localhost:8081/api
+  base-url: http://localhost:8084/api
   upload:
     root-directory: target/test-uploads
 

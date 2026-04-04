@@ -11,7 +11,7 @@ kept in sync with this file via `tooling/scripts/util/sync-ai-instructions.sh`.
 GJP Open API — a Spring Boot 3.x **read-only, unauthenticated** REST API serving public
 content (articles, videos, images, audio, files, logos, questions, websites, app settings).
 
-- **Port:** 8081 | **Context path:** `/api/` | **Base URL:** `http://localhost:8081/api`
+- **Port:** 8084 | **Context path:** `/api/` | **Base URL:** `http://localhost:8084/api`
 - **Java 21** | **Spring Boot 3.4.5** | **MySQL 8**
 - **No authentication** — all endpoints are public
 - **No mutations** — GET only; all writes handled by `gjp-admin-api-boot`

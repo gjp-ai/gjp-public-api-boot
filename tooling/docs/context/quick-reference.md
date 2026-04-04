@@ -7,7 +7,7 @@ One-page cheat sheet. Read this before writing any code for this project.
 ## Project Identity
 
 - **Role:** Public read-only API — no authentication, no mutations
-- **Port:** 8081 | **Context path:** `/api/` | **Base URL:** `http://localhost:8081/api`
+- **Port:** 8084 | **Context path:** `/api/` | **Base URL:** `http://localhost:8084/api`
 - **Java 21** | **Spring Boot 3.4.5** | **MySQL 8**
 - **Package root:** `org.ganjp.api`
 - **Shares database** with `gjp-admin-api-boot` — same tables, same data

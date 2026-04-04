@@ -8,7 +8,7 @@ Open access APIs — Spring Boot 3.x REST API for unauthenticated/public endpoin
     ```bash
     ./tooling/script/run.sh
     ```
-    The API will be available at `http://localhost:8081/api/`.
+    The API will be available at `http://localhost:8084/api/`.
 
 ## 📚 Documentation & Developer Assets
 

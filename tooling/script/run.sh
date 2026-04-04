@@ -11,7 +11,7 @@
 # Usage:
 #   ./run.sh          # run with dev profile (default)
 #   ./run.sh --prod   # run with prod profile
-#   ./run.sh --stop   # stop any running instance on port 8081
+#   ./run.sh --stop   # stop any running instance on port 8084
 
 set -euo pipefail
 
@@ -44,7 +44,7 @@ while [[ $# -gt 0 ]]; do
             echo "Options:"
             echo "  --dev     Run with 'dev' profile (default)"
             echo "  --prod    Run with 'prod' profile"
-            echo "  --stop    Stop any running instance on port 8081 and exit"
+            echo "  --stop    Stop any running instance on port 8084 and exit"
             echo "  --help    Show this help message"
             echo ""
             echo "Dev profile  : requires environment variables:"
@@ -64,17 +64,17 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-# ── Stop any running instance on port 8081 ──────────────────────────────────
-PIDS=$(lsof -ti:8081 2>/dev/null || true)
+# ── Stop any running instance on port 8084 ──────────────────────────────────
+PIDS=$(lsof -ti:8084 2>/dev/null || true)
 if [[ -n "${PIDS}" ]]; then
-    echo "Stopping existing instance on port 8081 (PID: ${PIDS})..."
+    echo "Stopping existing instance on port 8084 (PID: ${PIDS})..."
     echo "${PIDS}" | xargs kill -9 2>/dev/null || true
     sleep 1
     echo "Stopped."
 fi
 
 if [[ "${STOP_ONLY}" == true ]]; then
-    [[ -z "${PIDS}" ]] && echo "No running instance found on port 8081."
+    [[ -z "${PIDS}" ]] && echo "No running instance found on port 8084."
     exit 0
 fi
 
@@ -122,7 +122,7 @@ echo "  GJP Open API - Starting"
 echo "============================================"
 echo ""
 echo "Profile  : ${SPRING_PROFILE}"
-echo "Port     : 8081"
+echo "Port     : 8084"
 echo "Context  : /api/"
 echo ""
 
