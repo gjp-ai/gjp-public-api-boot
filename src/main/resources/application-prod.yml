@@ -29,7 +29,7 @@ logging:
     org.ganjp.api: WARN
     org.springframework: WARN
   file:
-    name: logs/gjp-public-api-boot.log
+    name: logs/gjp-open-api-boot.log
   pattern:
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
 

@@ -2,7 +2,7 @@
 #
 # GJP API Public - Run Script
 # ============================
-# Starts the gjp-public-api-boot application (no authentication required).
+# Starts the gjp-open-api-boot application (no authentication required).
 #
 # Configuration is managed via Spring profile YAML files:
 #   application-dev.yml  - Local development (requires env vars: MYSQL_USERNAME, MYSQL_PASSWORD)
@@ -118,7 +118,7 @@ fi
 # ── Display startup info ───────────────────────────────────────────────────
 echo ""
 echo "============================================"
-echo "  GJP Public API - Starting"
+echo "  GJP Open API - Starting"
 echo "============================================"
 echo ""
 echo "Profile  : ${SPRING_PROFILE}"

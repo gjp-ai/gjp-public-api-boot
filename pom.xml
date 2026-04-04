@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.ganjp</groupId>
-	<artifactId>gjp-public-api</artifactId>
+	<artifactId>gjp-open-api</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
-	<name>GJP Public API</name>
-	<description>Gan Jianping Public API - No Authentication Required</description>
+	<name>GJP Open API</name>
+	<description>Gan Jianping Open API - No Authentication Required</description>
 	<url/>
 	<licenses>
 		<license/>

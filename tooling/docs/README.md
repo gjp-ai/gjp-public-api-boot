@@ -1,4 +1,4 @@
-# GJP Public API — Documentation Index
+# GJP Open API — Documentation Index
 
 ## 🤖 AI Context
 

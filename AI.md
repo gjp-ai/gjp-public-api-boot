@@ -1,4 +1,4 @@
-# GJP Public API — AI Instructions
+# GJP Open API — AI Instructions
 
 This file is the universal source of truth for AI assistants working in this repository.
 Tool-specific files (CLAUDE.md, .cursorrules, .github/copilot-instructions.md, etc.) are
@@ -8,7 +8,7 @@ kept in sync with this file via `tooling/scripts/util/sync-ai-instructions.sh`.
 
 ## Project Overview
 
-GJP Public API — a Spring Boot 3.x **read-only, unauthenticated** REST API serving public
+GJP Open API — a Spring Boot 3.x **read-only, unauthenticated** REST API serving public
 content (articles, videos, images, audio, files, logos, questions, websites, app settings).
 
 - **Port:** 8081 | **Context path:** `/api/` | **Base URL:** `http://localhost:8081/api`

@@ -1,6 +1,6 @@
-# gjp-public-api-boot
+# gjp-open-api-boot
 
-Public access APIs — Spring Boot 3.x REST API for unauthenticated/public endpoints.
+Open access APIs — Spring Boot 3.x REST API for unauthenticated/public endpoints.
 
 ## 🚀 Quick Start (Local Development)
 

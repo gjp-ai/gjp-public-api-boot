@@ -1,6 +1,6 @@
 # Coding Standards & Code Generation Guide
 
-> Coding standards and conventions for the GJP Public API Spring Boot project. 
+> Coding standards and conventions for the GJP Open API Spring Boot project. 
 > This document acts as the **Blueprint for Code Generators** and human developers alike. All new modules (Entity, Service, Controller, DTOs) **MUST** strictly adhere to these patterns.
 
 ## Table of Contents
