@@ -1,10 +1,9 @@
 {
   "info": {
-    "_postman_id": "3f0b9ef0-b0af-4a3b-9fa6-6a3f460b673f",
+    "_postman_id": "bbd6a3bb-3e0f-4b4f-ac7c-7333c622d318",
     "name": "gjp-open-api-boot",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53392057",
-    "_collection_link": "https://go.postman.co/collection/53392057-3f0b9ef0-b0af-4a3b-9fa6-6a3f460b673f?source=collection_link"
+    "_exporter_id": "24142293"
   },
   "item": [
     {
@@ -16,12 +15,12 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/v1/app-settings",
+              "raw": "{{base_url}}/open/app-settings",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
-                "v1",
+                "open",
                 "app-settings"
               ]
             }
@@ -64,12 +63,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/articles?page=0&size=20",
+                  "raw": "{{base_url}}/open/articles?page=0&size=20",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "articles"
                   ],
                   "query": [
@@ -92,20 +91,14 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/articles/:id",
+                  "raw": "{{base_url}}/open/articles/677c3236-81c3-48c0-a181-3d23653d9ba6",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "articles",
-                    ":id"
-                  ],
-                  "variable": [
-                    {
-                      "key": "id",
-                      "value": "1"
-                    }
+                    "677c3236-81c3-48c0-a181-3d23653d9ba6"
                   ]
                 }
               },
@@ -122,12 +115,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/videos",
+                  "raw": "{{base_url}}/open/videos",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "videos"
                   ]
                 }
@@ -140,12 +133,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/videos/:id",
+                  "raw": "{{base_url}}/open/videos/:id",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "videos",
                     ":id"
                   ],
@@ -170,12 +163,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/images",
+                  "raw": "{{base_url}}/open/images",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "images"
                   ]
                 }
@@ -188,12 +181,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/images/:id",
+                  "raw": "{{base_url}}/open/images/:id",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "images",
                     ":id"
                   ],
@@ -212,12 +205,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/images/view/:filename",
+                  "raw": "{{base_url}}/open/images/view/:filename",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "images",
                     "view",
                     ":filename"
@@ -242,12 +235,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/audios",
+                  "raw": "{{base_url}}/open/audios",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "audios"
                   ]
                 }
@@ -260,12 +253,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/audios/:id",
+                  "raw": "{{base_url}}/open/audios/:id",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "audios",
                     ":id"
                   ],
@@ -284,12 +277,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/audios/view/:filename",
+                  "raw": "{{base_url}}/open/audios/view/:filename",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "audios",
                     "view",
                     ":filename"
@@ -309,12 +302,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/audios/cover-images/:filename",
+                  "raw": "{{base_url}}/open/audios/cover-images/:filename",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "audios",
                     "cover-images",
                     ":filename"
@@ -339,12 +332,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/questions",
+                  "raw": "{{base_url}}/open/questions",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "questions"
                   ]
                 }
@@ -357,12 +350,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/questions/:id",
+                  "raw": "{{base_url}}/open/questions/:id",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "questions",
                     ":id"
                   ],
@@ -386,12 +379,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/websites",
+                  "raw": "{{base_url}}/open/websites",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "websites"
                   ]
                 }
@@ -404,12 +397,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/websites/:id",
+                  "raw": "{{base_url}}/open/websites/:id",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "websites",
                     ":id"
                   ],
@@ -433,12 +426,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/logos",
+                  "raw": "{{base_url}}/open/logos",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "logos"
                   ]
                 }
@@ -451,12 +444,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/logos/:id",
+                  "raw": "{{base_url}}/open/logos/:id",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "logos",
                     ":id"
                   ],
@@ -480,12 +473,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/files",
+                  "raw": "{{base_url}}/open/files",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "files"
                   ]
                 }
@@ -498,12 +491,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/files/:id",
+                  "raw": "{{base_url}}/open/files/:id",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "files",
                     ":id"
                   ],
@@ -522,12 +515,12 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/v1/files/view/:filename",
+                  "raw": "{{base_url}}/open/files/view/:filename",
                   "host": [
                     "{{base_url}}"
                   ],
                   "path": [
-                    "v1",
+                    "open",
                     "files",
                     "view",
                     ":filename"
@@ -573,7 +566,11 @@
   "variable": [
     {
       "key": "base_url",
-      "value": "http://localhost:8084"
+      "value": "http://localhost:8081"
+    },
+    {
+      "key": "base_url_remote",
+      "value": ""
     }
   ]
 }

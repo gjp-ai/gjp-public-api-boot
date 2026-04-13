@@ -5,7 +5,7 @@
 # Starts the gjp-open-api-boot application (no authentication required).
 #
 # Configuration is managed via Spring profile YAML files:
-#   application-dev.yml  - Local development (requires env vars: MYSQL_USERNAME, MYSQL_PASSWORD)
+#   application-dev.yml  - Local development (requires env vars: MYSQL_URL, MYSQL_USERNAME, MYSQL_PASSWORD)
 #   application-prod.yml - Production (requires env vars: DB_URL, DB_USERNAME, DB_PASSWORD)
 #
 # Usage:
@@ -16,6 +16,10 @@
 set -euo pipefail
 
 # ── Load MYSQL env vars from zsh profile if not already set ──────────────────
+if [[ -z "${MYSQL_URL:-}" ]]; then
+    MYSQL_URL=$(zsh -lc 'echo $MYSQL_URL' 2>/dev/null || true)
+    export MYSQL_URL
+fi
 if [[ -z "${MYSQL_USERNAME:-}" ]]; then
     MYSQL_USERNAME=$(zsh -lc 'echo $MYSQL_USERNAME' 2>/dev/null || true)
     export MYSQL_USERNAME
@@ -48,6 +52,7 @@ while [[ $# -gt 0 ]]; do
             echo "  --help    Show this help message"
             echo ""
             echo "Dev profile  : requires environment variables:"
+            echo "  MYSQL_URL       MySQL URL"
             echo "  MYSQL_USERNAME  MySQL username"
             echo "  MYSQL_PASSWORD  MySQL password"
             echo ""
