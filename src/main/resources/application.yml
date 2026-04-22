@@ -38,14 +38,14 @@ article:
       directory: ${cms.upload.root-directory}/articles/content-images
 
 audio:
-  base-url: ${cms.base-url}/open/audios/
+  base-url: ${cms.base-url}/open/audios/view/
   cover-image:
     base-url: ${cms.base-url}/open/audios/cover-images/
   upload:
     directory: ${cms.upload.root-directory}/audios
 
 video:
-  base-url: ${cms.base-url}/open/videos/
+  base-url: ${cms.base-url}/open/videos/view/
   cover-image:
     base-url: ${cms.base-url}/open/videos/cover-images/
   upload:
