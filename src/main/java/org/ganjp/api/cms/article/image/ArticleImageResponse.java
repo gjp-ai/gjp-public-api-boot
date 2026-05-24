@@ -12,6 +12,7 @@ import org.ganjp.api.cms.article.image.ArticleImage.Language;
 @AllArgsConstructor
 public class ArticleImageResponse {
     private String id;
+    private String channel;
     private String articleId;
     private String articleTitle;
     private String filename;

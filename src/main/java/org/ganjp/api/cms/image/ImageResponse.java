@@ -12,6 +12,7 @@ import org.ganjp.api.cms.image.Image;
 @AllArgsConstructor
 public class ImageResponse {
     private String id;
+    private String channel;
     private String name;
     private String altText;
     private String url;

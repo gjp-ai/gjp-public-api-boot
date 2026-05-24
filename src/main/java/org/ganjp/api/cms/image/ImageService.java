@@ -69,6 +69,7 @@ public class ImageService {
                 .altText(r.getAltText())
                 .tags(r.getTags())
                 .lang(r.getLang())
+                .channel(r.getChannel())
                 .displayOrder(r.getDisplayOrder())
                 .updatedAt(r.getUpdatedAt() != null ? r.getUpdatedAt().toString() : null)
                 .url(CmsUtil.joinBaseAndPath(imageBaseUrl, r.getFilename()))

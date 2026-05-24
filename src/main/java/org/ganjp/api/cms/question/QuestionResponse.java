@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class QuestionResponse {
     private String id;
+    private String channel;
     private String question;
     private String answer;
     private String tags;

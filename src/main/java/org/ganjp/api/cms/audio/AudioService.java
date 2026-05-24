@@ -76,6 +76,7 @@ public class AudioService {
                 .artist(r.getArtist())
                 .tags(r.getTags())
                 .lang(r.getLang())
+                .channel(r.getChannel())
                 .displayOrder(r.getDisplayOrder())
                 .updatedAt(r.getUpdatedAt() != null ? r.getUpdatedAt().toString() : null)
                 .url(CmsUtil.joinBaseAndPath(audioBaseUrl, r.getFilename()))

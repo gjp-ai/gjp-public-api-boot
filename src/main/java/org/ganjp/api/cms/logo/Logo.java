@@ -20,6 +20,9 @@ public class Logo {
     @Column(name = "id", columnDefinition = "char(36)")
     private String id;
 
+    @Column(name = "channel", length = 20)
+    private String channel;
+
     @Column(name = "name", length = 255, nullable = false)
     private String name;
 

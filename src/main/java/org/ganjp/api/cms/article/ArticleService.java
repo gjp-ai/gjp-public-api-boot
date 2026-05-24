@@ -66,6 +66,7 @@ public class ArticleService {
                 .coverImageOriginalUrl(article.getCoverImageOriginalUrl())
                 .tags(article.getTags())
                 .lang(article.getLang())
+                .channel(article.getChannel())
                 .displayOrder(article.getDisplayOrder())
                 .updatedAt(article.getUpdatedAt() != null ? article.getUpdatedAt().toString() : null)
                 .coverImageUrl(CmsUtil.joinBaseAndPath(articleProperties.getCoverImage().getBaseUrl(),
@@ -84,6 +85,7 @@ public class ArticleService {
                 .coverImageOriginalUrl(article.getCoverImageOriginalUrl())
                 .tags(article.getTags())
                 .lang(article.getLang())
+                .channel(article.getChannel())
                 .displayOrder(article.getDisplayOrder())
                 .updatedAt(article.getUpdatedAt() != null ? article.getUpdatedAt().toString() : null)
                 .coverImageUrl(CmsUtil.joinBaseAndPath(articleProperties.getCoverImage().getBaseUrl(),

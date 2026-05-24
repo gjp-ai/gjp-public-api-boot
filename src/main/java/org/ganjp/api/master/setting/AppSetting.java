@@ -18,6 +18,9 @@ public class AppSetting {
     @Column(name = "id", length = 36)
     private String id;
 
+    @Column(name = "channel", length = 20)
+    private String channel;
+
     @Column(name = "name", length = 50, nullable = false)
     private String name;
 

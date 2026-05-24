@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class FileResponse {
     private String id;
+    private String channel;
     private String name;
     private String url;
     private String originalUrl;

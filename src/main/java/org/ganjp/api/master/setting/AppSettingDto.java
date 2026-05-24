@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 public class AppSettingDto {
 
     private String name;
+    private String channel;
     private String value;
     private String lang;
 
@@ -20,6 +21,7 @@ public class AppSettingDto {
                 .name(setting.getName())
                 .value(setting.getValue())
                 .lang(setting.getLang().name())
+                .channel(setting.getChannel())
                 .build();
     }
 }

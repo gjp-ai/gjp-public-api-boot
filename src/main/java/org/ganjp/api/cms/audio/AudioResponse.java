@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class AudioResponse {
     private String id;
+    private String channel;
     private String title;
     private String description;
     private String subtitle;

@@ -73,6 +73,7 @@ public class VideoService {
                 .description(r.getDescription())
                 .tags(r.getTags())
                 .lang(r.getLang())
+                .channel(r.getChannel())
                 .displayOrder(r.getDisplayOrder())
                 .updatedAt(r.getUpdatedAt() != null ? r.getUpdatedAt().toString() : null)
                 .url(CmsUtil.joinBaseAndPath(videoBaseUrl, r.getFilename()))

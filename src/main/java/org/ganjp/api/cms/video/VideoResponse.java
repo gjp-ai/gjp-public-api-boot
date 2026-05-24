@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class VideoResponse {
     private String id;
+    private String channel;
     private String title;
     private String description;
     private String url;

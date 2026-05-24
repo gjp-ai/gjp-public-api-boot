@@ -16,6 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ArticleDetailResponse {
     private String id;
+    private String channel;
     private String title;
     private String summary;
     private String content;

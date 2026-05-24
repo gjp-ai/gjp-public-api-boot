@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class WebsiteResponse {
     private String id;
+    private String channel;
     private String name;
     private String description;
     private String url;

@@ -17,6 +17,9 @@ public class Audio {
     @Column(columnDefinition = "char(36)", nullable = false)
     private String id;
 
+    @Column(name = "channel", length = 20)
+    private String channel;
+
     @Column(length = 255, nullable = false)
     private String name;
 

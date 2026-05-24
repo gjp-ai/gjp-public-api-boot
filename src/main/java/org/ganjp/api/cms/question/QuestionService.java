@@ -43,6 +43,7 @@ public class QuestionService {
                 .answer(r.getAnswer())
                 .tags(r.getTags())
                 .lang(r.getLang())
+                .channel(r.getChannel())
                 .displayOrder(r.getDisplayOrder())
                 .updatedAt(r.getUpdatedAt() != null ? r.getUpdatedAt().toString() : null)
                 .build();

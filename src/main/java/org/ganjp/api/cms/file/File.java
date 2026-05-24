@@ -15,6 +15,9 @@ public class File {
     @Column(columnDefinition = "char(36)", nullable = false)
     private String id;
 
+    @Column(name = "channel", length = 20)
+    private String channel;
+
     private String name;
 
     @Column(name = "original_url")
